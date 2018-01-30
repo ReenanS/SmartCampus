@@ -1,0 +1,32 @@
+<ion-content>
+  <ion-slides pager (ionSlideDidChange)="slideChanged()" (ionSlideDrag)="slideMoved()">
+    <ion-slide>
+      <div class="diag" style="background: url('assets/imgs/whitebg.svg') no-repeat">
+        <ion-icon ios="ios-analytics" md="md-analytics" color="primary" [@bounce]='state' (@bounce.done)="animationDone()"></ion-icon>
+      </div>
+      <div [@bounce]='state'>
+        <h2>Por que se cadastrar?</h2>
+        <p>Ao se cadastrar, seus dados serão mineirados.</p>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="diag" style="background: url('assets/imgs/whitebg.svg') no-repeat">
+        <ion-icon ios="ios-trophy" md="md-trophy" color="primary" [@bounce]='state'></ion-icon>
+      </div>
+      <div>
+        <h2>Conheça as suas notas</h2>
+        <p>Utilize o aplicativo, sincronize com a web e acesse todos as suas notas além dos calendários de provas e mapa de salas.</p>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="diag" style="background: url('assets/imgs/whitebg.svg') no-repeat">
+        <ion-icon ios="ios-chatboxes" md="md-chatboxes" color="primary" [@bounce]='state'></ion-icon>
+      </div>
+      <div>
+        <h2>Mantenha-se informado</h2>
+        <p>Notícias da Mauá no seu celular.</p>
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <button (click)="skip()" id="skip">{{ skipMsg }}</button>
+</ion-content>
