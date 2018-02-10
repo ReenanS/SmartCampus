@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the MainPage page.
+ * Generated class for the Tab1Page page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,20 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-main',
-  templateUrl: 'main.html',
+  selector: 'page-tab1',
+  templateUrl: 'tab1.html',
 })
-export class MainPage {
+export class Tab1Page {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  doLogin() {
-    this.navCtrl.setRoot('MenuPage');
-  }
-
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MainPage');
+    console.log('ionViewDidLoad Tab1Page');
   }
 
 }
