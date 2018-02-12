@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { SpecialPage } from './special';
+import { SidemenuPage } from './sidemenu';
 
 @NgModule({
   declarations: [
-    SpecialPage,
+    SidemenuPage,
   ],
   imports: [
-    IonicPageModule.forChild(SpecialPage),
+    IonicPageModule.forChild(SidemenuPage),
   ],
 })
-export class SpecialPageModule {}
+export class SidemenuPageModule {}

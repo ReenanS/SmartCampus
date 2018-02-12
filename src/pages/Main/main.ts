@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the MainPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { LoginPage } from '../login/login';
+import { SignupPage } from '../signup/signup';
 
 @IonicPage()
 @Component({
@@ -18,12 +14,15 @@ export class MainPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  doLogin() {
-    this.navCtrl.setRoot('MenuPage');
-  }
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad MainPage');
   }
 
+  login(){
+    this.navCtrl.push(LoginPage);
+   }
+ 
+   signup(){
+    this.navCtrl.push(SignupPage, {}, {animate:false});
+   }
 }

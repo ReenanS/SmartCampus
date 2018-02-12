@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SideMenuPage } from '../sidemenu/sidemenu';
 
 /**
- * Generated class for the SpecialPage page.
+ * Generated class for the SignupPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +11,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-special',
-  templateUrl: 'special.html',
+  selector: 'page-signup',
+  templateUrl: 'signup.html',
 })
-export class SpecialPage {
+export class SignupPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad SpecialPage');
+    console.log('ionViewDidLoad SignupPage');
   }
 
+  signup(){
+    //Api connections
+   this.navCtrl.setRoot(SideMenuPage);
+    }
 }
