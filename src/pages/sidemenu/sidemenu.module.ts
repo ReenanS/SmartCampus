@@ -10,4 +10,4 @@ import { SideMenuPage } from './sidemenu';
     IonicPageModule.forChild(SideMenuPage),
   ],
 })
-export class SideMenuPageModule {}
+export class SidemenuPageModule {}

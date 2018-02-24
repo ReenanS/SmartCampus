@@ -6,7 +6,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { MainPage } from '../pages/main/main';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { SideMenuPage } from '../pages/sidemenu/sidemenu';
@@ -17,7 +16,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   declarations: [
     MyApp,
     HomePage,
-    MainPage,
     LoginPage,
     SignupPage,
     SideMenuPage
@@ -31,7 +29,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   entryComponents: [
     MyApp,
     HomePage,
-    MainPage,
     LoginPage,
     SignupPage,
     SideMenuPage

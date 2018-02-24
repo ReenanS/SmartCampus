@@ -1,6 +1,6 @@
 import { Component, ViewChild, trigger, transition, style, state, animate, keyframes } from '@angular/core';
 import { NavController, Slides } from 'ionic-angular';
-import { MainPage } from '../main/main';
+import { LoginPage } from '../login/login';
 
 
 @Component({
@@ -35,7 +35,7 @@ export class HomePage {
   }
 
   skip() {
-    this.navCtrl.push(MainPage);
+    this.navCtrl.push(LoginPage);
   }
 
   slideChanged() {
