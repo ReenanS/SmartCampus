@@ -1,16 +1,16 @@
 <ion-menu [content]="content">
   <ion-header>
-    <ion-toolbar>
-      <ion-title>Side Menu</ion-title>
-    </ion-toolbar>
+      <ion-avatar>
+        <img src="assets/imgs/renan.jpeg">
+      </ion-avatar>
+      <h3>Renan Souza Silva</h3>
   </ion-header>
- 
   <ion-content>
     <ion-list>
       <button ion-item menuClose *ngFor="let p of pages" (click)="openPage(p)">
           <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
           {{ p.title }}
-        </button>
+      </button>
     </ion-list>
   </ion-content>
 </ion-menu>

@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import { SideMenuPage } from '../sidemenu/sidemenu';
 import { FormGroup, AbstractControl, FormBuilder, Validators } from "@angular/forms";
 import { LoginPage } from '../login/login';
 import { LottieAnimationViewModule } from 'ng-lottie';
 
 /**
- * Generated class for the SignupPage page.
+ * Generated class for the RecoverpassPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -14,19 +13,17 @@ import { LottieAnimationViewModule } from 'ng-lottie';
 
 @IonicPage()
 @Component({
-  selector: 'page-signup',
-  templateUrl: 'signup.html',
+  selector: 'page-recoverpass',
+  templateUrl: 'recoverpass.html',
 })
-export class SignupPage {
+export class RecoverpassPage {
+
   // global from group object
-  public signupForm: FormGroup;
+  public recoverpassForm: FormGroup;
 
   // input controls
   public email: AbstractControl;
-  public name: AbstractControl;
-  public username: AbstractControl;
-  public password: AbstractControl;
-  
+
   // lotie config
   lottieConfig:any;
 
@@ -34,42 +31,36 @@ export class SignupPage {
     private alertCtrl: AlertController,
     public navCtrl: NavController) {
 
-  LottieAnimationViewModule.forRoot();
+    LottieAnimationViewModule.forRoot();
 
-  this.lottieConfig = {
-    path: 'assets/js/user.json',
-    autoplay: true,
-    loop: true
-                      }
-                                  }
+    this.lottieConfig = {
+        path: 'assets/js/simple_outline_lock_.json',
+        autoplay: true,
+        loop: true
+                        }  
+  }
 
   public ngOnInit(): void {
 
-    this.signupForm = this.fb.group({
-      email: [null, Validators.compose([Validators.required])],
-      name: [null, Validators.compose([Validators.required])],
-      username: [null, Validators.compose([Validators.required])],
-      password: [null, Validators.compose([Validators.required])],
+    this.recoverpassForm = this.fb.group({
+      email: [null, Validators.compose([Validators.required])]
     });
 
     // to get a direct handle to the AbstractControl, use "email" in the View
-    this.email = this.signupForm.controls['email'];
-    this.name = this.signupForm.controls['name'];
-    this.username = this.signupForm.controls['username'];
-    this.password = this.signupForm.controls['password'];
+    this.email = this.recoverpassForm.controls['email'];
 
   }
 
 
   public signup() {
 
-    if (!this.signupForm.valid) {
+    if (!this.recoverpassForm.valid) {
       return;
     }
 
     this.alertCtrl.create({
       title: 'Sucesso',
-      message: 'Parabéns! Você criou uma conta. Agora faça o login',
+      message: 'Um email de recuperação foi enviado para você. Olhe seu email!',
       buttons: ['OK']
 
     }).present();
@@ -94,8 +85,9 @@ export class SignupPage {
 
   }
 
-  public login(){
+  public login() {
     this.navCtrl.setRoot(LoginPage);
   }
+
 
 }

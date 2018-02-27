@@ -1,47 +1,69 @@
-<div class="login">
-  <div class="container">
-  <h1>Bem vindo ao</h1>
+  <ion-content scrool="false" padding>
+    
     <img class="logo" src="assets/imgs/logo.png">
-    <form class="form">
-        <p>Por favor entre com sua conta.</p>
+
+    <h3 ion-text
+        color="white"
+        style="margin-bottom:22px;"
+        margin-bottom>
+        <code>$smartcampus</code><span class="blink">&#9608;</span>
+    </h3>
+  
+    <form [formGroup]="loginForm"
+          margin-top
+          novalidate>
+  
+      <ion-list no-lines>
         <ion-item>
-            <ion-input type="text" placeholder="Seu endereço de e-mail"></ion-input>
-          </ion-item>
-          
-          <ion-item>
-            <ion-input type="password" placeholder="Sua senha"></ion-input>
-          </ion-item>
-          
-          <button ion-button full (click)="login()">Login</button>          
+          <ion-input placeholder="Email ou nome de usuário"
+                     formControlName="email"
+                     type="email"
+                     spellcheck="false"
+                     autocapitalize="off"
+                     required></ion-input>
+        </ion-item>
+        <ion-item margin-top>
+          <ion-input placeholder="Senha"
+                     formControlName="password"
+                     type="password"
+                     spellcheck="false"
+                     autocapitalize="off"
+                     required></ion-input>
+        </ion-item>
+      </ion-list>
+  
+      <button (click)="login()"
+              [disabled]="!loginForm.valid"
+              color="white"
+              type="button"
+              ion-button
+              block
+              outline
+              margin-bottom>Entrar</button>
+  
+      <button (click)="recoverPassword()"
+              color="white"
+              type="button"
+              ion-button
+              block
+              clear>
+              <small>Esqueceu seus dados de login? <strong>Obtenha ajuda para entrar.</strong></small></button>
+  
     </form>
-    <!-- <span style="display:none" id="login-error">Usuário ou senha inválidos!</span>
-    <img class="loader" src="assets/imgs/loader.svg">
-    <div id="login-confirm" style="display:none">
-      <svg class="checkmark" xmlns="http://www.w3.org/2000/svg"
-           width="80"
-           height="80"
-           viewBox="0 0 32 32">
-        <circle class="circle"
-                cx="16"
-                cy="16"
-                r="16"
-                fill="#5473FF" />
-        <path class="check"
-              d="M9 16l5 5 9-9"
-              fill="none"
-              stroke="#fff"
-              stroke-width="2.5"
-              stroke-linecap="round" />
-      </svg>
-
-    </div>-->
-  </div>
-</div>
-
-
-
-<!--<ion-footer>
-    <ion-toolbar bold>
-      <ion-title>Esqueceu sua senha?</ion-title>
+  </ion-content>
+  
+  <ion-footer>
+    <ion-toolbar color="white-transparent"
+                 text-center>
+  
+      <ion-buttons>
+        <button (click)="signUp()"
+                ion-button
+                color="white">
+                <small>Não tem uma conta? <strong>Cadastra-se.</strong>
+                </small>
+          </button>
+      </ion-buttons>
+  
     </ion-toolbar>
-  </ion-footer>//-->
+  </ion-footer>

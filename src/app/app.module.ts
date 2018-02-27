@@ -8,8 +8,10 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
+import { RecoverpassPage } from '../pages/recoverpass/recoverpass';
 import { SideMenuPage } from '../pages/sidemenu/sidemenu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LottieAnimationViewModule } from 'ng-lottie';
 
 
 @NgModule({
@@ -18,12 +20,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomePage,
     LoginPage,
     SignupPage,
+    RecoverpassPage,
     SideMenuPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
-    BrowserAnimationsModule
+    IonicModule.forRoot(MyApp,{
+      scrollPadding: false,
+      scrollAssist: true,
+      autoFocusAssist: false,
+    }),
+    BrowserAnimationsModule,
+    LottieAnimationViewModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -31,6 +39,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomePage,
     LoginPage,
     SignupPage,
+    RecoverpassPage,
     SideMenuPage
   ],
   providers: [

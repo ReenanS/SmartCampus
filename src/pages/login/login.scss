@@ -1,83 +1,77 @@
-#page-home {
-    h1 {
-      text-align: center;
-    }
+page-login{
 
-    .login {
+  // align the form horizontally
+  .scroll-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      overflow-y: hidden !important;
+  }
+
+  .logo{
+      width: 15%;
+      min-width: 200px;
+  }
+  // make the form adjust to the full width
+  form {
       width: 100%;
-      text-align: center;
-      height: 95%;
-      margin-top: 5%;
-    }
-    .logo{
-      opacity:0;
-      width: 40%;
-      min-width: 300px;
-    }
-    .loader{
-      transition:2s all;
-    }
-    form input {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      //appearance: none;
-      outline: 0;
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      background-color: rgba(255, 255, 255, 0.2);
-      width: 250px;
-      border-radius: 3px;
-      padding: 10px 15px;
-      margin: 0 auto 10px auto;
-      display: block;
-      text-align: center;
-      font-size: 18px;
-      color: white;
-      -webkit-transition-duration: 0.25s;
-      transition-duration: 0.25s;
-      font-weight: 300;
-    }
-    form input:hover {
-        background-color: rgba(255, 255, 255, 0.4);
-    }
+  }
 
-      form input:focus {
-        background-color: white;
-        width: 300px;
-        color: #5473FF;
-      }
+  // adds the soothing gradient to the background of the page
+  .content {
+      background: none;  
+      background-size: 1200% 100%;
+  } 
 
-    form button {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      outline: 0;
-      background-color: white;
-      border: 0;
-      padding: 10px 15px;
-      color: #5473FF;
-      border-radius: 3px;
-      width: 250px;
-      cursor: pointer;
-      font-size: 18px;
-      -webkit-transition-duration: 0.25s;
-      transition-duration: 0.25s;
-    }
+  // give inputs a light background color
+  .item-ios,
+  .item-md,
+  .item-wp  {
+      background-color: color($colors, white-transparent, base);  
+      color:#fff;
+  }
 
-      form button:hover {
-        background-color: #f5f7f9;
-      }
-      form button{
-        margin-top:50px;
-        position:relative;
-        bottom:-500px;
-      }
-    .checkmark {
-      display: block;
-      text-align: center;
-      margin: 0 auto;
-      margin-top: 50px;
-    }
-}
-.bodylogin{
-width: 100%;
-height: 100%;
+  // give the footer a white transparent border
+  .footer-ios .toolbar-background-ios {
+      border-color: color($colors, white-transparent, base);  
+  }
+  
+  /** fixes **/      
+  // if a list has a no-line directive, the last item still shows
+  // a bottom border, so hide it
+  .list-md[no-lines] .item-input:last-child {
+      border-width: 0;
+  }    
+
+  /** custom, not required **/ 
+  // this class and animation definition are just custom styling, it isn't really required
+  .blink {
+      -webkit-animation: Blink 1.5s linear infinite;
+      -moz-animation: Blink 1.5s linear infinite;
+      animation: Blink 1.5s linear infinite;
+  }
+
+  @-webkit-keyframes Blink {
+      0% { opacity: 1; }
+      49% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 0; } 
+  }
+
+  @-moz-keyframes Blink {
+      0% { opacity: 1; }
+      49% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 0; } 
+  }
+
+  @keyframes Blink { 
+      0% { opacity: 1; }
+      49% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 0; } 
+  }      
+
+
 }

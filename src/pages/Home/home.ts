@@ -1,6 +1,7 @@
 import { Component, ViewChild, trigger, transition, style, state, animate, keyframes } from '@angular/core';
 import { NavController, Slides } from 'ionic-angular';
 import { LoginPage } from '../login/login';
+import { LottieAnimationViewModule } from 'ng-lottie';
 
 
 @Component({
@@ -30,12 +31,35 @@ export class HomePage {
   skipMsg: string = "Pular";
   state: string = 'x';
 
-  constructor(public navCtrl: NavController) {
+  // lotie config
+  lottieConfig:any;
+  lottieConfig1:any;
+  lottieConfig2:any;
 
+  constructor(public navCtrl: NavController) {
+    LottieAnimationViewModule.forRoot();
+
+    this.lottieConfig = {
+      path: 'assets/js/done.json',
+      autoplay: true,
+      loop: true
+                        }
+
+    this.lottieConfig1 = {
+      path: 'assets/js/trophy.json',
+      autoplay: true,
+      loop: true
+                          }
+
+    this.lottieConfig2 = {
+        path: 'assets/js/bell.json',
+        autoplay: true,
+        loop: true
+                           }
   }
 
   skip() {
-    this.navCtrl.push(LoginPage);
+    this.navCtrl.push(LoginPage,{},{animate: false});
   }
 
   slideChanged() {

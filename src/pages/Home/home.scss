@@ -1,3 +1,13 @@
+page-home{
+    
+.scroll-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: hidden !important;
+}
+
 .diag {
     position:absolute;
     z-index:1;
@@ -12,7 +22,7 @@ ion-icon {
 }
 
 h2 {
-    margin-top:80% !important;
+    margin-top:90% !important;
     font-weight:bold;
     font-size:1em;
 }
@@ -32,6 +42,11 @@ p {
     bottom: 12% !important;
 }
 
+// give the footer a white transparent border
+.footer-ios .toolbar-background-ios {
+    border-color: color($colors, white-transparent, base);  
+}
+
 #skip {
     position:absolute;
     bottom: 20px;
@@ -40,4 +55,6 @@ p {
     text-align: center;
     cursor: pointer;
     z-index: 5;
+}
+
 }

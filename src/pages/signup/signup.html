@@ -1,27 +1,79 @@
-<ion-content padding>
-  <ion-list>
+<ion-content scrool="false" padding>
+    
+  <lottie-animation-view [options]="lottieConfig" [width]="250" [height]="250">
+
+  </lottie-animation-view>
+
+    <h3 ion-text
+        color="white"
+        style="margin-bottom:22px;"
+        margin-bottom>
+        <code>$smartcampus</code><span class="blink">&#9608;</span>
+    </h3>
   
-    <ion-item>
-      <ion-label fixed>Name</ion-label>
-      <ion-input type="text" value=""></ion-input>
-    </ion-item>
+    <form [formGroup]="signupForm"
+          margin-top
+          novalidate>
   
-    <ion-item>
-      <ion-label fixed>Email</ion-label>
-      <ion-input type="text" value=""></ion-input>
-    </ion-item>
+      <ion-list no-lines>
+        <ion-item>
+          <ion-input placeholder="Email"
+                     formControlName="email"
+                     type="email"
+                     spellcheck="false"
+                     autocapitalize="off"
+                     required></ion-input>
+        </ion-item>
+        <ion-item margin-top>
+          <ion-input placeholder="Nome"
+                     formControlName="name"
+                     type="name"
+                     spellcheck="false"
+                     autocapitalize="off"
+                     required></ion-input>
+        </ion-item>
+        <ion-item margin-top>
+            <ion-input placeholder="Usuário"
+                       formControlName="username"
+                       type="username"
+                       spellcheck="false"
+                       autocapitalize="off"
+                       required></ion-input>
+          </ion-item>
+          <ion-item margin-top>
+            <ion-input placeholder="Senha"
+                       formControlName="password"
+                       type="password"
+                       spellcheck="false"
+                       autocapitalize="off"
+                       required></ion-input>
+          </ion-item>
+      </ion-list>
   
-    <ion-item>
-      <ion-label fixed>Username</ion-label>
-      <ion-input type="text" value=""></ion-input>
-    </ion-item>
+      <button (click)="signup()"
+              [disabled]="!signupForm.valid"
+              color="white"
+              type="button"
+              ion-button
+              block
+              outline
+              margin-bottom>Registrar</button>
   
-    <ion-item>
-      <ion-label fixed>Password</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-  
-    <button ion-button block color="primary" (click)="signup()">Signup</button>
-  
-  </ion-list>
+    </form>
   </ion-content>
+  
+  <ion-footer>
+    <ion-toolbar color="white-transparent"
+                 text-center>
+  
+      <ion-buttons>
+        <button (click)="login()"
+                ion-button
+                color="white">
+                <small>Já tem uma conta? <strong>Faça login.</strong>
+                </small>
+          </button>
+      </ion-buttons>
+  
+    </ion-toolbar>
+  </ion-footer>

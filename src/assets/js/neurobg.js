@@ -19,7 +19,7 @@
  
    PNA.prototype.bindUiActions = function () {
      $(window).on('resize', function () {
-       this.sizeContainer();
+       //this.sizeContainer();
        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
        this.sizeCanvas();
        this.particleNetwork.createParticles();
