@@ -26,7 +26,10 @@ export class SideMenuPage {
 
   pages: PageInterface[] = [
     { title: 'Home', pageName: 'TabsPage', tabComponent: 'Tab1Page', index: 0, icon: 'home' },
-    { title: 'Grades', pageName: 'TabsPage', tabComponent: 'Tab2Page', index: 1, icon: 'school' }
+    { title: 'Grades', pageName: 'TabsPage', tabComponent: 'Tab2Page', index: 1, icon: 'stats' },
+    { title: 'Moodle', pageName: 'TabsPage', tabComponent: 'Tab3Page', index: 2, icon: 'school' },
+    { title: 'Calendar', pageName: 'TabsPage', tabComponent: 'Tab4Page', index: 3, icon: 'calendar' },
+    { title: 'Logout', pageName: 'TabsPage', tabComponent: 'Tab5Page', index: 4, icon: 'log-out' }
   ];
 
   constructor(public navCtrl: NavController) { }
@@ -40,8 +43,8 @@ export class SideMenuPage {
     }
 
     // The active child nav is our Tabs Navigation
-    if (this.nav.getActiveChildNav() && page.index != undefined) {
-      this.nav.getActiveChildNav().select(page.index);
+    if (this.nav.getActiveChildNavs()[0] && page.index != undefined) {
+      this.nav.getActiveChildNavs()[0].select(page.index);
     } else {
       // Tabs are not active, so reset the root page 
       // In this case: moving to or from SpecialPage
@@ -51,7 +54,7 @@ export class SideMenuPage {
 
   isActive(page: PageInterface) {
     // Again the Tabs Navigation
-    let childNav = this.nav.getActiveChildNav();
+    let childNav = this.nav.getActiveChildNavs()[0];
 
     if (childNav) {
       if (childNav.getSelected() && childNav.getSelected().root === page.tabComponent) {
