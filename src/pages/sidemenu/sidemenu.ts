@@ -25,8 +25,8 @@ export class SideMenuPage {
   @ViewChild(Nav) nav: Nav;
 
   pages: PageInterface[] = [
-    { title: 'Tab 1', pageName: 'TabsPage', tabComponent: 'Tab1Page', index: 0, icon: 'home' },
-    { title: 'Tab 2', pageName: 'TabsPage', tabComponent: 'Tab2Page', index: 1, icon: 'contacts' }
+    { title: 'Home', pageName: 'TabsPage', tabComponent: 'Tab1Page', index: 0, icon: 'home' },
+    { title: 'Grades', pageName: 'TabsPage', tabComponent: 'Tab2Page', index: 1, icon: 'school' }
   ];
 
   constructor(public navCtrl: NavController) { }

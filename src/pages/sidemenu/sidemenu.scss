@@ -1,12 +1,14 @@
 page-sidemenu {
    
-    .avatar{
+    ion-avatar img {
+        width: 100px !important;
+        height: 100px !important;
+        border-radius: 60%;
         margin: auto;
-        //position: absolute;
-        width: 100%;
-        left: 0;
-        bottom: 0;
-        text-align:center;
-     }
+        display: block;
+    }
 
+    h3 {
+        text-align: center;
+    }
 }
