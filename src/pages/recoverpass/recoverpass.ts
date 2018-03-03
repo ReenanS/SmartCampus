@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, AlertController } from 'ionic-angular';
 import { FormGroup, AbstractControl, FormBuilder, Validators } from "@angular/forms";
 import { LoginPage } from '../login/login';
 import { LottieAnimationViewModule } from 'ng-lottie';

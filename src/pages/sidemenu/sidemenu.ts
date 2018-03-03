@@ -1,6 +1,3 @@
-import { Tab2Page } from './../tab2/tab2';
-import { Tab1Page } from './../tab1/tab1';
-import { TabsPage } from './../tabs/tabs';
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, Nav } from 'ionic-angular';
 
