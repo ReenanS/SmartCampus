@@ -1,0 +1,69 @@
+  <ion-content scrool="false" padding>
+    
+    <img class="logo" src="assets/imgs/logo.png">
+
+    <h3 ion-text
+        color="white"
+        style="margin-bottom:22px;"
+        margin-bottom>
+        <code>$smartcampus</code><span class="blink">&#9608;</span>
+    </h3>
+  
+    <form [formGroup]="loginForm"
+          margin-top
+          novalidate>
+  
+      <ion-list no-lines>
+        <ion-item>
+          <ion-input placeholder="Email ou nome de usuário"
+                     formControlName="email"
+                     type="email"
+                     spellcheck="false"
+                     autocapitalize="off"
+                     required></ion-input>
+        </ion-item>
+        <ion-item margin-top>
+          <ion-input placeholder="Senha"
+                     formControlName="password"
+                     type="password"
+                     spellcheck="false"
+                     autocapitalize="off"
+                     required></ion-input>
+        </ion-item>
+      </ion-list>
+  
+      <button (click)="login()"
+              [disabled]="!loginForm.valid"
+              color="white"
+              type="button"
+              ion-button
+              block
+              outline
+              margin-bottom>Entrar</button>
+  
+      <button (click)="recoverPassword()"
+              color="white"
+              type="button"
+              ion-button
+              block
+              clear>
+              <small>Esqueceu seus dados de login? <strong>Obtenha ajuda para entrar.</strong></small></button>
+  
+    </form>
+  </ion-content>
+  
+  <ion-footer>
+    <ion-toolbar color="white-transparent"
+                 text-center>
+  
+      <ion-buttons>
+        <button (click)="signUp()"
+                ion-button
+                color="white">
+                <small>Não tem uma conta? <strong>Cadastra-se.</strong>
+                </small>
+          </button>
+      </ion-buttons>
+  
+    </ion-toolbar>
+  </ion-footer>

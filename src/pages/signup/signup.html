@@ -1,0 +1,79 @@
+<ion-content scrool="false" padding>
+    
+  <lottie-animation-view [options]="lottieConfig" [width]="250" [height]="250">
+
+  </lottie-animation-view>
+
+    <h3 ion-text
+        color="white"
+        style="margin-bottom:22px;"
+        margin-bottom>
+        <code>$smartcampus</code><span class="blink">&#9608;</span>
+    </h3>
+  
+    <form [formGroup]="signupForm"
+          margin-top
+          novalidate>
+  
+      <ion-list no-lines>
+        <ion-item>
+          <ion-input placeholder="Email"
+                     formControlName="email"
+                     type="email"
+                     spellcheck="false"
+                     autocapitalize="off"
+                     required></ion-input>
+        </ion-item>
+        <ion-item margin-top>
+          <ion-input placeholder="Nome"
+                     formControlName="name"
+                     type="name"
+                     spellcheck="false"
+                     autocapitalize="off"
+                     required></ion-input>
+        </ion-item>
+        <ion-item margin-top>
+            <ion-input placeholder="Usuário"
+                       formControlName="username"
+                       type="username"
+                       spellcheck="false"
+                       autocapitalize="off"
+                       required></ion-input>
+          </ion-item>
+          <ion-item margin-top>
+            <ion-input placeholder="Senha"
+                       formControlName="password"
+                       type="password"
+                       spellcheck="false"
+                       autocapitalize="off"
+                       required></ion-input>
+          </ion-item>
+      </ion-list>
+  
+      <button (click)="signup()"
+              [disabled]="!signupForm.valid"
+              color="white"
+              type="button"
+              ion-button
+              block
+              outline
+              margin-bottom>Registrar</button>
+  
+    </form>
+  </ion-content>
+  
+  <ion-footer>
+    <ion-toolbar color="white-transparent"
+                 text-center>
+  
+      <ion-buttons>
+        <button (click)="login()"
+                ion-button
+                color="white">
+                <small>Já tem uma conta? <strong>Faça login.</strong>
+                </small>
+          </button>
+      </ion-buttons>
+  
+    </ion-toolbar>
+  </ion-footer>
