@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, AlertController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 import { FormGroup, AbstractControl, FormBuilder, Validators } from "@angular/forms";
 import { LoginPage } from '../login/login';
 import { LottieAnimationViewModule } from 'ng-lottie';
@@ -11,7 +11,6 @@ import { LottieAnimationViewModule } from 'ng-lottie';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-recoverpass',
   templateUrl: 'recoverpass.html',

@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, AlertController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 import { SideMenuPage } from '../sidemenu/sidemenu';
 import { SignupPage } from '../signup/signup';
 import { FormGroup, AbstractControl, FormBuilder, Validators } from "@angular/forms";
 import { RecoverpassPage } from '../recoverpass/recoverpass';
 
 
-@IonicPage()
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',

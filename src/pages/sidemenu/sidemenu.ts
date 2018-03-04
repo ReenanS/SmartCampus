@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, Nav } from 'ionic-angular';
+import { NavController, Nav } from 'ionic-angular';
 
 export interface PageInterface {
   title: string;
@@ -9,7 +9,6 @@ export interface PageInterface {
   icon: string;
 }
 
-@IonicPage()
 @Component({
   selector: 'page-sidemenu',
   templateUrl: 'sidemenu.html',
