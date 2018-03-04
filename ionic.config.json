@@ -1,8 +1,0 @@
-{
-  "name": "smartcampus",
-  "app_id": "aace5cd8",
-  "type": "ionic-angular",
-  "integrations": {
-    "cordova": {}
-  }
-}
