@@ -83,95 +83,6 @@ var SideMenuPage = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecoverpassPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng_lottie__ = __webpack_require__(47);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-/**
- * Generated class for the RecoverpassPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var RecoverpassPage = (function () {
-    function RecoverpassPage(fb, alertCtrl, navCtrl) {
-        this.fb = fb;
-        this.alertCtrl = alertCtrl;
-        this.navCtrl = navCtrl;
-        __WEBPACK_IMPORTED_MODULE_4_ng_lottie__["a" /* LottieAnimationViewModule */].forRoot();
-        this.lottieConfig = {
-            path: 'assets/js/simple_outline_lock_.json',
-            autoplay: true,
-            loop: true
-        };
-    }
-    RecoverpassPage.prototype.ngOnInit = function () {
-        this.recoverpassForm = this.fb.group({
-            email: [null, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required])]
-        });
-        // to get a direct handle to the AbstractControl, use "email" in the View
-        this.email = this.recoverpassForm.controls['email'];
-    };
-    RecoverpassPage.prototype.signup = function () {
-        if (!this.recoverpassForm.valid) {
-            return;
-        }
-        this.alertCtrl.create({
-            title: 'Sucesso',
-            message: 'Um email de recuperação foi enviado para você. Olhe seu email!',
-            buttons: ['OK']
-        }).present();
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__login_login__["a" /* LoginPage */]);
-        // example login procedure...
-        // this
-        //   .authService
-        //   .signInWithEmailAndPassword(this.email.value, this.password.value)
-        //   .catch((error: Error) => {
-        //    there you have it a generic way of catching errors, for more details see:
-        //    https://www.ionicrun.com/http-error-handling-informing-the-user-in-an-ionic-2-app/
-        //     this
-        //       .events
-        //       .publish(ENV.EVENTS.ERROR, error);
-        //   });
-    };
-    RecoverpassPage.prototype.login = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__login_login__["a" /* LoginPage */]);
-    };
-    RecoverpassPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-recoverpass',template:/*ion-inline-start:"C:\Users\user\Documents\IMT - Instituto Mauá de Tecnologia\Mauá 2018\TCC\Ionic_App\SmartCampus\src\pages\recoverpass\recoverpass.html"*/'<ion-content scrool="false" padding>\n\n  <lottie-animation-view [options]="lottieConfig" [width]="150" [height]="150">\n\n  </lottie-animation-view>\n\n    <h3 ion-text color="white" style="margin-bottom:22px;" margin-bottom>\n      <code>Esqueceu sua senha? Digite seu email abaixo para receber as instruções para recuperação de senha.</code>\n      <span class="blink">&#9608;</span>\n    </h3>\n\n  <form [formGroup]="recoverpassForm" margin-top novalidate>\n\n    <ion-list no-lines>\n      <ion-item>\n        <ion-input placeholder="Email" formControlName="email" type="email" spellcheck="false" autocapitalize="off" required></ion-input>\n      </ion-item>\n    </ion-list>\n\n    <button (click)="signup()" [disabled]="!recoverpassForm.valid" color="white" type="button" ion-button block outline margin-bottom>Enviar senha</button>\n\n  </form>\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar color="white-transparent" text-center>\n\n    <ion-buttons>\n      <button (click)="login()" ion-button color="white">\n        <small>Não recebeu o email de recuperação?\n          <strong>Clique aqui.</strong>\n        </small>\n      </button>\n    </ion-buttons>\n\n  </ion-toolbar>\n</ion-footer>'/*ion-inline-end:"C:\Users\user\Documents\IMT - Instituto Mauá de Tecnologia\Mauá 2018\TCC\Ionic_App\SmartCampus\src\pages\recoverpass\recoverpass.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
-    ], RecoverpassPage);
-    return RecoverpassPage;
-}());
-
-//# sourceMappingURL=recoverpass.js.map
-
-/***/ }),
-
-/***/ 103:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
@@ -263,6 +174,95 @@ var SignupPage = (function () {
 
 /***/ }),
 
+/***/ 103:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecoverpassPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__login_login__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ng_lottie__ = __webpack_require__(47);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the RecoverpassPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var RecoverpassPage = (function () {
+    function RecoverpassPage(fb, alertCtrl, navCtrl) {
+        this.fb = fb;
+        this.alertCtrl = alertCtrl;
+        this.navCtrl = navCtrl;
+        __WEBPACK_IMPORTED_MODULE_4_ng_lottie__["a" /* LottieAnimationViewModule */].forRoot();
+        this.lottieConfig = {
+            path: 'assets/js/simple_outline_lock_.json',
+            autoplay: true,
+            loop: true
+        };
+    }
+    RecoverpassPage.prototype.ngOnInit = function () {
+        this.recoverpassForm = this.fb.group({
+            email: [null, __WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].compose([__WEBPACK_IMPORTED_MODULE_2__angular_forms__["f" /* Validators */].required])]
+        });
+        // to get a direct handle to the AbstractControl, use "email" in the View
+        this.email = this.recoverpassForm.controls['email'];
+    };
+    RecoverpassPage.prototype.signup = function () {
+        if (!this.recoverpassForm.valid) {
+            return;
+        }
+        this.alertCtrl.create({
+            title: 'Sucesso',
+            message: 'Um email de recuperação foi enviado para você. Olhe seu email!',
+            buttons: ['OK']
+        }).present();
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__login_login__["a" /* LoginPage */]);
+        // example login procedure...
+        // this
+        //   .authService
+        //   .signInWithEmailAndPassword(this.email.value, this.password.value)
+        //   .catch((error: Error) => {
+        //    there you have it a generic way of catching errors, for more details see:
+        //    https://www.ionicrun.com/http-error-handling-informing-the-user-in-an-ionic-2-app/
+        //     this
+        //       .events
+        //       .publish(ENV.EVENTS.ERROR, error);
+        //   });
+    };
+    RecoverpassPage.prototype.login = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__login_login__["a" /* LoginPage */]);
+    };
+    RecoverpassPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-recoverpass',template:/*ion-inline-start:"C:\Users\user\Documents\IMT - Instituto Mauá de Tecnologia\Mauá 2018\TCC\Ionic_App\SmartCampus\src\pages\recoverpass\recoverpass.html"*/'<ion-content scrool="false" padding>\n\n  <lottie-animation-view [options]="lottieConfig" [width]="150" [height]="150">\n\n  </lottie-animation-view>\n\n    <h3 ion-text color="white" style="margin-bottom:22px;" margin-bottom>\n      <code>Esqueceu sua senha? Digite seu email abaixo para receber as instruções para recuperação de senha.</code>\n      <span class="blink">&#9608;</span>\n    </h3>\n\n  <form [formGroup]="recoverpassForm" margin-top novalidate>\n\n    <ion-list no-lines>\n      <ion-item>\n        <ion-input placeholder="Email" formControlName="email" type="email" spellcheck="false" autocapitalize="off" required></ion-input>\n      </ion-item>\n    </ion-list>\n\n    <button (click)="signup()" [disabled]="!recoverpassForm.valid" color="white" type="button" ion-button block outline margin-bottom>Enviar senha</button>\n\n  </form>\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar color="white-transparent" text-center>\n\n    <ion-buttons>\n      <button (click)="login()" ion-button color="white">\n        <small>Não recebeu o email de recuperação?\n          <strong>Clique aqui.</strong>\n        </small>\n      </button>\n    </ion-buttons>\n\n  </ion-toolbar>\n</ion-footer>'/*ion-inline-end:"C:\Users\user\Documents\IMT - Instituto Mauá de Tecnologia\Mauá 2018\TCC\Ionic_App\SmartCampus\src\pages\recoverpass\recoverpass.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormBuilder */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
+    ], RecoverpassPage);
+    return RecoverpassPage;
+}());
+
+//# sourceMappingURL=recoverpass.js.map
+
+/***/ }),
+
 /***/ 114:
 /***/ (function(module, exports) {
 
@@ -285,7 +285,7 @@ webpackEmptyAsyncContext.id = 114;
 
 var map = {
 	"../pages/login/login.module": [
-		287,
+		282,
 		6
 	],
 	"../pages/recoverpass/recoverpass.module": [
@@ -293,15 +293,15 @@ var map = {
 		5
 	],
 	"../pages/sidemenu/sidemenu.module": [
-		282,
+		284,
 		4
 	],
 	"../pages/signup/signup.module": [
-		286,
+		287,
 		3
 	],
 	"../pages/tab1/tab1.module": [
-		284,
+		285,
 		2
 	],
 	"../pages/tab2/tab2.module": [
@@ -309,7 +309,7 @@ var map = {
 		0
 	],
 	"../pages/tabs/tabs.module": [
-		285,
+		286,
 		1
 	]
 };
@@ -450,8 +450,8 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(279);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(199);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_signup_signup__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_recoverpass_recoverpass__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_signup_signup__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_recoverpass_recoverpass__ = __webpack_require__(103);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_sidemenu_sidemenu__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_platform_browser_animations__ = __webpack_require__(280);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_ng_lottie__ = __webpack_require__(47);
@@ -495,12 +495,12 @@ var AppModule = (function () {
                     autoFocusAssist: false,
                 }, {
                     links: [
-                        { loadChildren: '../pages/sidemenu/sidemenu.module#SidemenuPageModule', name: 'SideMenuPage', segment: 'sidemenu', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/recoverpass/recoverpass.module#RecoverpassPageModule', name: 'RecoverpassPage', segment: 'recoverpass', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/sidemenu/sidemenu.module#SidemenuPageModule', name: 'SideMenuPage', segment: 'sidemenu', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tab1/tab1.module#Tab1PageModule', name: 'Tab1Page', segment: 'tab1', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tab2/tab2.module#Tab2PageModule', name: 'Tab2Page', segment: 'tab2', priority: 'low', defaultHistory: [] }
                     ]
                 }),
@@ -584,9 +584,9 @@ var MyApp = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sidemenu_sidemenu__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup_signup__ = __webpack_require__(102);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_forms__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__recoverpass_recoverpass__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__recoverpass_recoverpass__ = __webpack_require__(103);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
