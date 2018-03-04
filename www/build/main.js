@@ -297,19 +297,19 @@ var map = {
 		4
 	],
 	"../pages/signup/signup.module": [
-		287,
+		285,
 		3
 	],
 	"../pages/tab1/tab1.module": [
-		285,
+		286,
 		2
 	],
 	"../pages/tab2/tab2.module": [
-		288,
+		287,
 		0
 	],
 	"../pages/tabs/tabs.module": [
-		286,
+		288,
 		1
 	]
 };
@@ -498,10 +498,10 @@ var AppModule = (function () {
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/recoverpass/recoverpass.module#RecoverpassPageModule', name: 'RecoverpassPage', segment: 'recoverpass', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sidemenu/sidemenu.module#SidemenuPageModule', name: 'SideMenuPage', segment: 'sidemenu', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tab1/tab1.module#Tab1PageModule', name: 'Tab1Page', segment: 'tab1', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tab2/tab2.module#Tab2PageModule', name: 'Tab2Page', segment: 'tab2', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/tab1/tab1.module#Tab1PageModule', name: 'Tab1Page', segment: 'tab1', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tab2/tab2.module#Tab2PageModule', name: 'Tab2Page', segment: 'tab2', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_11__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
